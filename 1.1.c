@@ -28,7 +28,7 @@ int main()
     const double y=3.7;
     const int z=-1;
     printf("a=%.5f", A(x,y,z));
-    printf("b=%.5f", B(x,y,z));
+    printf("/nb=%.5f", B(x,y,z));
     return 0;
 }
 
