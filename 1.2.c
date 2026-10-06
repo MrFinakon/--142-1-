@@ -32,8 +32,7 @@ int main()
     double v=get_double();
     double v1=get_double();
     double t=get_double();
-    double total_v=V2(v, v1);
-    printf("Path is: %.2f", S(total_v,t));
+    printf("Path is: %.2f", S(V2(v, v1),t));
     return 0;
 }
 
