@@ -2,6 +2,11 @@
 #include <math.h>
 #include <stdlib.h>
 
+/** @brief считывает с клавиатуры значение с плавающей точкой
+ * @return считанное значение
+ */
+double get_double();
+
 /** @brief считывает с клавиатуры значение с плавающей точкой для массы
  * @return считанное значение
  */
@@ -42,12 +47,23 @@ int main()
     return 0;
 }
 
-double get_mass()
+double get_double()
 {
     double s=0.0;
-    if (scanf("%lf",&s)!=1 || s<=0.0)
+    if (scanf("%lf",&s)!=1)
         {
-            printf("Ошибка: масса должна быть задана числом больше 0\n");
+            printf("Ошибка: введите число\n");
+            exit(1);
+        }
+    return s;
+}
+
+double get_mass()
+{
+    double s=get_double();
+    if (s<=0.0)
+        {
+            printf("Ошибка: масса должна быть больше 0\n");
             exit(1);
         }
     return s;
