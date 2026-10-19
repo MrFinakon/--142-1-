@@ -2,6 +2,8 @@
 #include <math.h>
 #include <stdlib.h>
 
+static const int C_STEEL = 500;
+
 /** @brief считывает с клавиатуры значение с плавающей точкой
  * @return считанное значение
  */
@@ -36,14 +38,13 @@ double Q(const double m, const int c, const int delta_t);
 
 int main()
 {
-    int c=500;
     printf("Введите массу детали:");
     double m=get_mass();
     printf("Введите начальную температуру:");
     int t0=get_temp();
     printf("Введите конечную температуру:");
     int t=get_temp();
-    printf("Количество теплоты: %.2f", Q(m,c,delta_t(t,t0)));
+    printf("Количество теплоты: %.2f", Q(m,C_STEEL,delta_t(t,t0)));
     return 0;
 }
 
