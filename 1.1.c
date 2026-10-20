@@ -3,8 +3,8 @@
 /**
  * @brief вычисляет значение функции A по заданному значению
  * @param x значение параметра x
- * @param y значение параметра x
- * @param z значение параметра x
+ * @param y значение параметра y
+ * @param z значение параметра z
  * @return рассчитанное значение
  */
 double A(const double x, const double y, const int z);
@@ -12,8 +12,8 @@ double A(const double x, const double y, const int z);
 /**
  * @brief вычисляет значение функции B по заданному значению
  * @param x значение параметра x
- * @param y значение параметра x
- * @param z значение параметра x
+ * @param y значение параметра y
+ * @param z значение параметра z
  * @return рассчитанное значение
  */
 double B(const double x, const double y, const int z);
