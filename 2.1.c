@@ -25,6 +25,10 @@ int check_negative(const double a, const double b, const double c);
  */
 double abs_sum(const double a, const double b, const double c);
 
+/**
+ * @brief точка входа в программу
+ * @return возвращает 0, если программа выполнена корректно
+ */
 int main()
 {
     printf("Введите три числа:\n");
