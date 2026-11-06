@@ -1,5 +1,6 @@
-#include <stdio.h>
+#define _USE_MATH_DEFINES // for C
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /** @brief считывает с клавиатуры значение с плавающей точкой
