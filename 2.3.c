@@ -2,10 +2,10 @@
 #include <math.h>
 #include <stdlib.h>
 
-/** @brief считывает с клавиатуры значение с плавающей точкой
+/** @brief считывает с клавиатуры значение больше 0 с плавающей точкой
  * @return считанное значение
  */
-double get_double();
+double get_positive_double();
 
 /**
  * @brief проверяет помещаются ли дома без поворота
@@ -17,7 +17,7 @@ double get_double();
  * @param s значение параметра s
  * @return если дома помещаются, то 1, если нет, то 0
  */
-int check_without_rotation(double a, double b, double p, double q, double r, double s);
+int check_without_rotation(const double a, const double b, const double p, const double q, const double r, const double s);
 
 /**
  * @brief проверяет возможно ли разместить два дома на участке со всеми возможными поворотами
@@ -32,14 +32,14 @@ int check_placement(const double a, const double b, const double p, const double
 int main()
 {
     printf("Введите значения (два) для размера участка:\n");
-    double a=get_double();
-    double b=get_double();
+    double a=get_positive_double();
+    double b=get_positive_double();
     printf("Введите значения (два) для размера первого дома:\n");
-    double p=get_double();
-    double q=get_double();
+    double p=get_positive_double();
+    double q=get_positive_double();
     printf("Введите значения (два) для размера второго дома:\n");
-    double r=get_double();
-    double s=get_double();
+    double r=get_positive_double();
+    double s=get_positive_double();
     
     if (check_placement(a,b,p,q,r,s)==1)
     {
@@ -52,7 +52,7 @@ int main()
     return 0;
 }
 
-double get_double()
+double get_positive_double()
 {
     double s=0.0;
     if (scanf("%lf",&s)!=1)
